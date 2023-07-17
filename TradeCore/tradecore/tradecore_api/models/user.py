@@ -8,7 +8,7 @@ from tradecore_api.models.managers.user_manager import UserManager
 
 class User(AbstractBaseUser, PermissionsMixin):
     """
-    This is a class for creating users.
+    This class for creating users.
     """
 
     email = models.EmailField(max_length=100, unique=True)
