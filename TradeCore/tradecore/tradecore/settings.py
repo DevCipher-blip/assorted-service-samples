@@ -1,9 +1,11 @@
+import os
+import secrets
 from pathlib import Path
 import datetime
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = __import__("os").environ["DJANGO_SECRET_KEY"]
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or os.environ.get("SECRET_KEY") or secrets.token_urlsafe(50)
 
 DEBUG = True
 

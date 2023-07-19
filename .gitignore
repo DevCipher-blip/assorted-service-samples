@@ -127,7 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-branch_structure.json
-temp_auto_push.bat
 temp_interactive_push.bat
 .gitignore
+
+# Local environments and generated files
+.venv/
+project_venv/
+node_modules/
+*.pyc
+.env.*
+!.env.example
+!.env.sample
+.DS_Store
